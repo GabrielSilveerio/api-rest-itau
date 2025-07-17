@@ -1,7 +1,6 @@
 package com.backend.itau.dto;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class TransacaoDTO {
     private double valor;
