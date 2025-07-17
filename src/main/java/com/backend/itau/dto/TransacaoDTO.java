@@ -1,10 +1,11 @@
 package com.backend.itau.dto;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class TransacaoDTO {
     private double valor;
-    private Date data;
+    private LocalDate data;
 
     public double getValor() {
         return valor;
@@ -14,11 +15,11 @@ public class TransacaoDTO {
         this.valor = valor;
     }
 
-    public Date getData() {
+    public LocalDate getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 }
