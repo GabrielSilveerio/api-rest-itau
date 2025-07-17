@@ -5,8 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
-import jdk.jfr.Timestamp;
-
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -16,7 +15,7 @@ public class TransacaoModel {
     private int id;
     @NotBlank(message = "valor não pode ser vazio")
     private double valor;
-    private Date data;
+    private LocalDate data;
 
     public int getId() {
         return id;
@@ -34,11 +33,11 @@ public class TransacaoModel {
         this.valor = valor;
     }
 
-    public Date getData() {
+    public LocalDate getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(LocalDate data) {
         this.data = data;
     }
 }
