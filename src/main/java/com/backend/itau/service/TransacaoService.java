@@ -7,6 +7,10 @@ import com.backend.itau.repository.TransacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.xml.crypto.Data;
+import java.time.LocalDate;
+import java.util.Date;
+
 @Service
 public class TransacaoService {
 
@@ -19,6 +23,8 @@ public class TransacaoService {
     }
 
     public TransacaoDTO realizaTransacao(TransacaoModel transacao) {
+        LocalDate data = LocalDate.now();
+        transacao.setData(data);
         return transacaoMapper.toDTO(transacaoRepository.save(transacao));
     }
 }
