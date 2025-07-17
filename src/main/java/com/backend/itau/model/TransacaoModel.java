@@ -13,7 +13,6 @@ public class TransacaoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotBlank(message = "valor não pode ser vazio")
     private double valor;
     private LocalDate data;
 

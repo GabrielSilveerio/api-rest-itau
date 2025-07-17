@@ -5,18 +5,18 @@ import com.backend.itau.mapper.TransacaoMapper;
 import com.backend.itau.model.TransacaoModel;
 import com.backend.itau.repository.TransacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
-
-import javax.xml.crypto.Data;
 import java.time.LocalDate;
-import java.util.Date;
 
 @Service
 public class TransacaoService {
 
     private final TransacaoRepository transacaoRepository;
     private final TransacaoMapper transacaoMapper;
+
     @Autowired
+    @Lazy
     public TransacaoService(TransacaoRepository transacaoRepository, TransacaoMapper transacaoMapper) {
         this.transacaoRepository = transacaoRepository;
         this.transacaoMapper = transacaoMapper;
